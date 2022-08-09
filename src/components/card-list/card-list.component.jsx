@@ -3,9 +3,8 @@ import Card from "../card/card.component"
 
 import './card-list.styles.css';
 
-class CardList extends Component {
-  render() {
-    const { monsters } = this.props;
+const CardList = () => {
+    const { monsters } = props;
 
     return (
       <div className='card-list'>
@@ -15,6 +14,5 @@ class CardList extends Component {
       </div>
     );
   }
-}
 
 export default CardList;
