@@ -1,15 +1,15 @@
+import React from 'react';
+
 import './card.style.css';
 
-const Card = ({ monster }) => {
-        const {id, name, email} = monster;
+export const Card = props => (
 
-        return (
-            <div className='card-container' key={id}>
-            <img alt={`monster ${name}`} src={`https://robohash.org/${monster.id}?set=set1&size=180x180`} />
-            <h2>{name}</h2>
-            <h3>{email}</h3>
+            <div className='card-container'>
+            <img alt='monster' src={`https://robohash.org/${props.monster.id}?set=set1&size=180x180`} />
+            <h2>{props.monster.name}</h2>
+            <h3>{props.monster.email}</h3>
             </div>
           )
-    }
+    
 
 export default Card;
